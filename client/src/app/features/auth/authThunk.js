@@ -7,7 +7,7 @@ export const register = createAsyncThunk(
     'auth/register',
     async (data, {rejectWithValue}) => {
         try {
-            const response = await axios.post(`${API}/api/register`, data);
+            const response = await axios.post(`${API}/register`, data);
             return response.data;
         } catch (err) {
             return rejectWithValue(err.response?.data?.message || 'server error');
@@ -19,7 +19,7 @@ export const login = createAsyncThunk(
     'auth/login',
     async (data, {rejectWithValue}) => {
         try {
-            const response = await axios.post(`${API}/api/login`, data);
+            const response = await axios.post(`${API}/login`, data);
             localStorage.setItem('token', response.data.token);
             return response.data;
         } catch (err) {
@@ -36,7 +36,7 @@ export const getUserInfo = createAsyncThunk(
             return rejectWithValue('No token, please login');
         }
         try {
-            const response = await axios.get(`${API}/api/getUserInfo`, {
+            const response = await axios.get(`${API}/getUserInfo`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 }

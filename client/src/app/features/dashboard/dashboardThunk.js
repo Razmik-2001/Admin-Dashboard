@@ -8,6 +8,7 @@ export const getUsers = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const response = await axios.get(`${API}/getUsers`);
+            console.log(response.data);
             return response.data;
         } catch (err) {
             return thunkAPI.rejectWithValue(
