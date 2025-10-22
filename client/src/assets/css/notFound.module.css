@@ -1,0 +1,32 @@
+.main {
+    min-height: 100vh;
+    background-color: white;
+    width: 100%;
+    padding: 120px 0 0 0;
+}
+
+.status {
+    text-align: center;
+    font-size: 200px;
+    color: #669fff;
+}
+
+.errorMessage {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.text {
+    text-align: center;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    max-width: 200px;
+    margin-top: 50px;
+}

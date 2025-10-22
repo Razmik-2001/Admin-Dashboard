@@ -1,0 +1,213 @@
+:root {
+    --primary: #6A11CB;
+    --secondary: #2575FC;
+    --danger: #FF5F6D;
+    --warning: #FFC107;
+    --success: #4CAF50;
+    --info: #17a2b8;
+    --background: #F8F9FA;
+    --sidebar: #2C3E50;
+    --card-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.08);
+    --text-light: #f8f9fa;
+    --text-dark: #343a40;
+}
+
+.profileContainer {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.profileHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.profileAvatar {
+    position: relative;
+    margin-right: 2rem;
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 50%;
+}
+
+.avatarEdit {
+    position: relative;
+    cursor: pointer;
+}
+
+.avatarInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.profileAvatar img {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.3125rem solid white;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+    outline: 1px solid #dcdcdc;
+}
+
+.avatarEdit {
+    position: absolute;
+    bottom: 0.625rem;
+    right: 0.625rem;
+    background: var(--primary);
+    color: white;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.avatarEdit:hover {
+    transform: scale(1.1);
+    background: var(--secondary);
+}
+
+.profileInfo h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.profileInfo p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.profileStatus {
+    display: inline-block;
+    padding: 0.1875rem 0.5rem;
+    background: rgba(106, 17, 203, 0.1);
+    color: var(--primary);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.profileContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.profileSection {
+    margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.sectionTitle i {
+    margin-right: 0.8rem;
+    color: var(--primary);
+}
+
+.formGroup {
+    margin-bottom: 1.2rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.formControl {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.formControl:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.1875rem rgba(106, 17, 203, 0.1);
+    outline: none;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
+.btnPrimary {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+}
+
+.btnPrimary:hover {
+    opacity: 0.9;
+    transform: translateY(-0.125rem);
+}
+
+.btnOutline {
+    background: transparent;
+    border: 1px solid #ddd;
+    color: var(--text-dark);
+}
+
+.btnOutline:hover {
+    background: #f8f9fa;
+}
+
+.btnDanger {
+    background: var(--danger);
+    color: white;
+}
+
+.btnDanger:hover {
+    opacity: 0.9;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .profileHeader {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profileAvatar {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
